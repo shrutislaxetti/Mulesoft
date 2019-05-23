@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="644b31d5-10ed-4f23-8923-a19d421122e6" basePath="/" >
+		<http:listener-connection host="localhost" port="8081" />
+	</http:listener-config>
+	<flow name="mulesampleprojectFlow" doc:id="418116f0-1e28-4917-9aea-6f3537b38ffa" >
+		<http:listener doc:name="HttpRequestListener" doc:id="3bace934-07a0-48e4-9dd7-b11241ac376d" config-ref="HTTP_Listener_config" path="/get"/>
+		<logger level="INFO" doc:name="Logger" doc:id="f1ef2d73-c810-4e63-9e55-b8c3c84c66e0" message="Http Request listening "/>
+		<set-payload value="Welcome to MuleSoft Training" doc:name="Response" doc:id="1f21018b-8f2f-4bd9-98f8-98311d30e026" mimeType="application/json; id=1"/>
+	</flow>
+</mule>
