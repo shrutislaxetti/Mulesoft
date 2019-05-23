@@ -12,4 +12,5 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 		<logger level="INFO" doc:name="Logger" doc:id="f1ef2d73-c810-4e63-9e55-b8c3c84c66e0" message="Http Request listening "/>
 		<set-payload value="Welcome to MuleSoft Training" doc:name="Response" doc:id="1f21018b-8f2f-4bd9-98f8-98311d30e026" mimeType="application/json; id=1"/>
 	</flow>
+	
 </mule>
