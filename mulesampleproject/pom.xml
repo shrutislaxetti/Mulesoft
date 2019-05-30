@@ -24,6 +24,19 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+				 <cloudHubDeployment>
+                              <uri>https://anypoint.mulesoft.com</uri>
+                              <muleVersion>${mule.version}</muleVersion>
+                              <username>${cloud.user}</username>
+                              <password>${cloud.password}</password>
+                              <applicationName>${cloudhubAppName}</applicationName>
+                              <environment>${cloud.env}</environment>
+                              <businessGroup>${anypoint.businessGroup}</businessGroup>
+                              <workerType>${cloudhub.workerType}</workerType>
+                             <properties>
+                                    <key>value</key>
+                             </properties>
+                       </cloudHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -69,26 +82,5 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-	
-<plugin>
-                <groupId>org.mule.tools.maven</groupId>
-                <artifactId>mule-maven-plugin</artifactId>
-                <version>3.1.6</version>
-                <extensions>true</extensions>
-                <configuration>
-                       <cloudHubDeployment>
-                              <uri>https://anypoint.mulesoft.com</uri>
-                              <muleVersion>${mule.version}</muleVersion>
-                              <username>${cloud.user}</username>
-                              <password>${cloud.password}</password>
-                              <applicationName>${cloudhubAppName}</applicationName>
-                              <environment>${cloud.env}</environment>
-                              <businessGroup>${anypoint.businessGroup}</businessGroup>
-                              <workerType>${cloudhub.workerType}</workerType>
-                             <properties>
-                                    <key>value</key>
-                             </properties>
-                       </cloudHubDeployment>
-                </configuration>
-            </plugin>
+
 </project>
