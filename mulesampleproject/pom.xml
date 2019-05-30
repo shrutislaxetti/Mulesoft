@@ -70,25 +70,5 @@
         </pluginRepository>
     </pluginRepositories>
 	
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
-				<extensions>true</extensions>
-				<configuration>
-					<cloudHubDeployment>
-						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>${app.runtime}</muleVersion>
-						<username>${username}</username>
-						<password>${password}</password>
-						<applicationName>${project.artifactId}</applicationName>
-						<environment>${environment}</environment>
-					</cloudHubDeployment>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
 
 </project>
