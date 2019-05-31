@@ -11,7 +11,6 @@
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
 		<app.runtime>4.1.4</app.runtime>
 	</properties>
 
@@ -42,13 +41,6 @@
 	</build>
 
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.mule.tools.maven/mule-maven-plugin -->
-      <dependency>
-    	<groupId>org.mule.tools.maven</groupId>
-    	<artifactId>mule-maven-plugin</artifactId>
-   	 <version>3.1.6</version>
- </dependency>
-
         <dependency>
             <groupId>org.mule.connectors</groupId>
             <artifactId>mule-http-connector</artifactId>
