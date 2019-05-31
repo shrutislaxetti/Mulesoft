@@ -13,7 +13,6 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.1.4</app.runtime>
-		<mule.maven.plugin.version>3.1.6</mule.maven.plugin.version>
 	</properties>
 
 	<build>
@@ -21,7 +20,7 @@
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
+				<version>3.1.6</version>
 				<extensions>true</extensions>
 				<configuration>
 				 <cloudHubDeployment>
@@ -43,6 +42,13 @@
 	</build>
 
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.mule.tools.maven/mule-maven-plugin -->
+      <dependency>
+    	<groupId>org.mule.tools.maven</groupId>
+    	<artifactId>mule-maven-plugin</artifactId>
+   	 <version>3.1.6</version>
+ </dependency>
+
         <dependency>
             <groupId>org.mule.connectors</groupId>
             <artifactId>mule-http-connector</artifactId>
