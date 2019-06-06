@@ -28,6 +28,37 @@
 				<configuration>
 				</configuration>
 			</plugin>
+			<plugin>
+			       <groupId>org.mule.tools.maven</groupId>
+			       <artifactId>mule-maven-plugin</artifactId>
+			       <version>${mule.maven.plugin.version}</version>
+			       <extensions>true</extensions>
+			         <configuration>
+			           <cloudHubDeployment>
+			             <uri>https://anypoint.mulesoft.com</uri>;
+			             <muleVersion>${app.runtime}</muleVersion>
+						 <deploymentTimeout>300000</deploymentTimeout>
+			             <username>${ANYPOINT_USERNAME}</username>
+			             <password>${ANYPOINT_PASSWORD}</password>
+			             <applicationName>my-test-api-1.0.0</applicationName>
+			             <workers>${workers}</workers>
+			             <workerType>${workerType}</workerType>
+			             <region>${region}</region>
+			             <environment>${ANYPOINT_ENV}</environment>
+			             <businessGroup>${ANYPOINT_ORG}</businessGroup>
+			           </cloudHubDeployment>
+
+			         <executions>
+			           <execution>
+			             <id>deploy</id>
+			             <phase>deploy</phase>
+			             <goals>
+			               <goal>deploy</goal>
+			             </goals>
+			           </execution>
+			         </executions>
+			       </configuration>
+			     </plugin>
 		</plugins>
 	</build>
 
