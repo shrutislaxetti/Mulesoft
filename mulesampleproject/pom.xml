@@ -95,6 +95,13 @@
 	<build>
 		<plugins>
 			<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+       <artifactId>maven-deploy-plugin</artifactId>
+       <configuration>
+              <skip>true</skip>
+            </configuration>
+          </plugin>
+			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
@@ -148,15 +155,7 @@
 		</pluginRepository>
 	</pluginRepositories>
 	
-	<distributionManagement> 
-		 <repository>
-            <uniqueVersion>false</uniqueVersion>
-          <id>mycloudhub</id>
-          <name>Cloud Hub</name>
-          <uri>https://anypoint.mulesoft.com</uri>
-          <layout>default</layout>
-        </repository>
-     </distributionManagement>
+
  
  
 </project>
