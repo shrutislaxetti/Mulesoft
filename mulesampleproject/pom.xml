@@ -31,67 +31,10 @@
         
 	</dependencies>
 
-	<!-- <repositories>
-          <repository>
-            <id>anypoint-exchange</id>
-            <name>Anypoint Exchange</name>
-            <url>https://maven.anypoint.mulesoft.com/api/v1/maven</url>
-            <layout>default</layout>
-        </repository>
-        <repository>
-            <id>mulesoft-releases</id>
-            <name>MuleSoft Releases Repository</name>
-            <url>https://repository.mulesoft.org/releases/</url>
-            <layout>default</layout>
-        </repository>
-    </repositories>
-     -->
+	
+ 
+ 
 
- <!--  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.mule.tools.maven</groupId>
-        <artifactId>mule-maven-plugin</artifactId>
-        <configuration>
-          <deploymentType>cloudhub</deploymentType>
-          <muleVersion>${mule.version}</muleVersion> 
-          <username>${anypoint.username}</username> 
-          <password>${anypoint.password}</password> 
-          <applicationName>${artifactId}</applicationName>
-          <environment>${cloundhub.env}</environment> 
-          <businessGroup>${anypoint.businessGroup}</businessGroup>
-          <region>${cloudhub.region}</region>
-          <uri>${anypoint.uri}</uri> 
-          <workerType>${cloudhub.workerType}</workerType>
-          <workers>${cloudhub.workers}</workers>
-          
-          <cloudHubDeployment>
-            <uri>https://anypoint.mulesoft.com</uri>
-            <muleVersion>3.9.0</muleVersion>
-            <username>${username}</username>
-            <password>${password}</password>
-            <applicationName>Mule_demo_application</applicationName>
-            <environment>${environment}</environment>
-            <properties>
-                <key>value</key>
-            </properties>
-        </cloudHubDeployment>
-        </configuration>
-        <executions>
-          <execution>
-            <id>deploy</id>
-            <phase>deploy</phase>
-            <goals>
-              <goal>deploy</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
- -->
- 
- 
 	<build>
 		<plugins>
 		
@@ -147,16 +90,7 @@
 			<url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
 		</pluginRepository>
 	</pluginRepositories>
-	<distributionManagement>
-	<repository>
-            <uniqueVersion>false</uniqueVersion>
-          <id>mycloudhub</id>
-          <name>Cloud Hub</name>
-          <url>https://anypoint.mulesoft.com/cloudhub/</url>
-          <layout>default</layout>
-        </repository>
-	</distributionManagement>
-
+	
  
  
 </project>
