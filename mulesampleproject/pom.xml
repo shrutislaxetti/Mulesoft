@@ -5,7 +5,7 @@
 	<groupId>com.mycompany</groupId>
 	<artifactId>mulesampleproject</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <packaging>mule-application</packaging>
+    <packaging>jar</packaging>
 	<name>mulesampleproject</name>
    
     <properties>
@@ -13,32 +13,6 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<app.runtime>4.1.4</app.runtime>
 	</properties>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-maven-plugin</artifactId>
-				<version>3.1.6</version>
-				<extensions>true</extensions>
-				<configuration>
-				 <cloudHubDeployment>
-                              <uri>https://anypoint.mulesoft.com</uri>
-                              <muleVersion>${mule.version}</muleVersion>
-                              <username>${cloud.user}</username>
-                              <password>${cloud.password}</password>
-                              <applicationName>${cloudhubAppName}</applicationName>
-                              <environment>${cloud.env}</environment>
-                              <businessGroup>${anypoint.businessGroup}</businessGroup>
-                              <workerType>${cloudhub.workerType}</workerType>
-                             <properties>
-                                    <key>value</key>
-                             </properties>
-                       </cloudHubDeployment>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
 
 	<dependencies>
         <dependency>
@@ -81,4 +55,48 @@
         </pluginRepository>
     </pluginRepositories>
 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.mule.tools.maven</groupId>
+        <artifactId>mule-maven-plugin</artifactId>
+        <configuration>
+          <!-- <deploymentType>cloudhub</deploymentType>
+          <muleVersion>${mule.version}</muleVersion> 
+          <username>${anypoint.username}</username> 
+          <password>${anypoint.password}</password> 
+          <applicationName>${artifactId}</applicationName>
+          <environment>${cloundhub.env}</environment> 
+          <businessGroup>${anypoint.businessGroup}</businessGroup>
+          <region>${cloudhub.region}</region>
+          <uri>${anypoint.uri}</uri> 
+          <workerType>${cloudhub.workerType}</workerType>
+          <workers>${cloudhub.workers}</workers> -->
+          
+          <cloudHubDeployment>
+            <uri>https://anypoint.mulesoft.com</uri>
+            <muleVersion>3.9.0</muleVersion>
+            <username>${username}</username>
+            <password>${password}</password>
+            <applicationName>Mule_demo_application</applicationName>
+            <environment>${environment}</environment>
+            <properties>
+                <key>value</key>
+            </properties>
+        </cloudHubDeployment>
+        </configuration>
+        <executions>
+          <execution>
+            <id>deploy</id>
+            <phase>deploy</phase>
+            <goals>
+              <goal>deploy</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
 </project>
+
