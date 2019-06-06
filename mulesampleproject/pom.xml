@@ -103,13 +103,13 @@
 					<classifier>mule-application</classifier>
 					<cloudHubDeployment>
 						<region>eu-central-1</region>
-						<uri>https://eu1.anypoint.mulesoft.com</uri>
+						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>${app.runtime}</muleVersion>
 						<username>${username}</username>
 						<password>${password}</password>
 						<businessGroup>Abbott\ADC\ADC-NextGen-V3</businessGroup>
 						<applicationName>cloudHubMaven</applicationName>
-						<environment>DEV-CI</environment>
+						<environment>SANDBOX</environment>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
@@ -153,7 +153,7 @@
             <uniqueVersion>false</uniqueVersion>
           <id>mycloudhub</id>
           <name>Cloud Hub</name>
-          <url>https://eu1.anypoint.mulesoft.com/cloudhub/</url>
+          <url>https://anypoint.mulesoft.com/cloudhub/</url>
           <layout>default</layout>
         </repository>
      </distributionManagement>
