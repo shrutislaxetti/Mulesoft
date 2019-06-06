@@ -43,7 +43,7 @@
             <layout>default</layout>
         </repository>
     </repositories>
-    <--<pluginRepositories>
+     <!--<pluginRepositories>
         <pluginRepository>
             <id>mulesoft-releases</id>
             <name>mulesoft release repository</name>
