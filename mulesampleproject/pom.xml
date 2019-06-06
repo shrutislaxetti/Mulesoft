@@ -43,7 +43,7 @@
             <layout>default</layout>
         </repository>
     </repositories>
-    <pluginRepositories>
+    <--<pluginRepositories>
         <pluginRepository>
             <id>mulesoft-releases</id>
             <name>mulesoft release repository</name>
@@ -53,7 +53,7 @@
                 <enabled>false</enabled>
             </snapshots>
         </pluginRepository>
-    </pluginRepositories>
+    </pluginRepositories> -->
 
   <build>
     <plugins>
@@ -79,7 +79,8 @@
             <username>${username}</username>
             <password>${password}</password>
             <applicationName>Mule_demo_application</applicationName>
-            <environment>${environment}</environment>
+            <environment>SANDBOX</environment>
+           <target>CloudHub</target>
             <properties>
                 <key>value</key>
             </properties>
