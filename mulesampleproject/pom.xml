@@ -53,7 +53,7 @@
 						<password>${password}</password>
 						<businessGroup>Abbott\ADC\ADC-NextGen-V3</businessGroup>
 						<applicationName>cloudHubMaven</applicationName>
-						<environment>SANDBOX</environment>
+						<environment>Sandbox</environment>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
