@@ -29,9 +29,11 @@
 			           <cloudHubDeployment>
 			             <uri>https://anypoint.mulesoft.com</uri>
 				     <deploymentTimeout>300000</deploymentTimeout>
+				     <muleVersion>${app.runtime}</muleVersion>
 			             <username>${ANYPOINT_USERNAME}</username>
 			             <password>${ANYPOINT_PASSWORD}</password>
 			             <applicationName>mulesampleproject-new</applicationName>
+				     <environment>Sandbox</environment>
 			           </cloudHubDeployment>
 			         <executions>
 			           <execution>
