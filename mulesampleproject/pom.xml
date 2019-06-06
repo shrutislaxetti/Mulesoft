@@ -5,13 +5,14 @@
 	<groupId>com.mycompany</groupId>
 	<artifactId>mulesampleproject</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>mule-application</packaging>
 	<name>mulesampleproject</name>
    
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<app.runtime>4.1.4</app.runtime>
+		<mule.maven.plugin.version>3.1.6</mule.maven.plugin.version>
 	</properties>
 
 	<dependencies>
@@ -27,9 +28,10 @@
             <version>1.1.2</version>
             <classifier>mule-plugin</classifier>
         </dependency>
+        
 	</dependencies>
 
-	<repositories>
+	<!-- <repositories>
           <repository>
             <id>anypoint-exchange</id>
             <name>Anypoint Exchange</name>
@@ -43,34 +45,15 @@
             <layout>default</layout>
         </repository>
     </repositories>
-     <!--<pluginRepositories>
-        <pluginRepository>
-            <id>mulesoft-releases</id>
-            <name>mulesoft release repository</name>
-            <layout>default</layout>
-            <url>https://repository.mulesoft.org/releases/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories> -->
+     -->
 
-  <build>
+ <!--  <build>
     <plugins>
-	 
-	    <plugin>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-deploy-plugin</artifactId>
-  <configuration>
-    <skip>true</skip>
-  </configuration>
-</plugin>
-	    
       <plugin>
         <groupId>org.mule.tools.maven</groupId>
         <artifactId>mule-maven-plugin</artifactId>
         <configuration>
-          <!-- <deploymentType>cloudhub</deploymentType>
+          <deploymentType>cloudhub</deploymentType>
           <muleVersion>${mule.version}</muleVersion> 
           <username>${anypoint.username}</username> 
           <password>${anypoint.password}</password> 
@@ -80,7 +63,7 @@
           <region>${cloudhub.region}</region>
           <uri>${anypoint.uri}</uri> 
           <workerType>${cloudhub.workerType}</workerType>
-          <workers>${cloudhub.workers}</workers> -->
+          <workers>${cloudhub.workers}</workers>
           
           <cloudHubDeployment>
             <uri>https://anypoint.mulesoft.com</uri>
@@ -88,8 +71,7 @@
             <username>${username}</username>
             <password>${password}</password>
             <applicationName>Mule_demo_application</applicationName>
-            <environment>SANDBOX</environment>
-           <target>CloudHub</target>
+            <environment>${environment}</environment>
             <properties>
                 <key>value</key>
             </properties>
@@ -107,6 +89,65 @@
       </plugin>
     </plugins>
   </build>
+ -->
+ 
+ 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>${mule.maven.plugin.version}</version>
+				<extensions>true</extensions>
+				<configuration>
+					<classifier>mule-application</classifier>
+					<cloudHubDeployment>
+						<region>eu-central-1</region>
+						<uri>https://eu1.anypoint.mulesoft.com</uri>
+						<muleVersion>${app.runtime}</muleVersion>
+						<username>${username}</username>
+						<password>${password}</password>
+						<businessGroup>Abbott\ADC\ADC-NextGen-V3</businessGroup>
+						<applicationName>cloudHubMaven</applicationName>
+						<environment>DEV-CI</environment>
+					</cloudHubDeployment>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
+	
+
+	<repositories>
+		<repository>
+			<id>anypoint-exchange</id>
+			<name>Anypoint Exchange</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v1/maven</url>
+			<layout>default</layout>
+		</repository>
+		<repository>
+			<id>mulesoft-releases</id>
+			<name>MuleSoft Releases Repository</name>
+			<url>https://repository.mulesoft.org/releases/</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>mulesoft-releases</id>
+			<name>mulesoft release repository</name>
+			<layout>default</layout>
+			<url>https://repository.mulesoft.org/releases/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>mule-public</id>
+			<url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
+		</pluginRepository>
+	</pluginRepositories>
+ 
 </project>
+
 
