@@ -42,7 +42,7 @@
 						<muleVersion>${app.runtime}</muleVersion>
 						<username>${username}</username>
 						<password>${password}</password>
-						<applicationName>cloudHubMaven</applicationName>
+						<applicationName>mulesampleproject-new</applicationName>
 						<environment>Sandbox</environment>
 					</cloudHubDeployment>
 				</configuration>
