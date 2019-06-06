@@ -37,22 +37,25 @@
 
 	<build>
 		<plugins>
-		
+			 <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+                        </plugin>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
-				<configuration>
-					<classifier>mule-application</classifier>
-					<cloudHubDeployment>
+				     <configuration>
+					 <classifier>mule-application</classifier>
+					 <cloudHubDeployment>
 						<region>eu-central-1</region>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>${app.runtime}</muleVersion>
 						<username>${username}</username>
 						<password>${password}</password>
 						<businessGroup>Abbott\ADC\ADC-NextGen-V3</businessGroup>
-						<applicationName>cloudHubMaven</applicationName>
+						<applicationName>cloudHubMaven123</applicationName>
 						<environment>Sandbox</environment>
 					</cloudHubDeployment>
 				</configuration>
@@ -90,7 +93,14 @@
 			<url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
 		</pluginRepository>
 	</pluginRepositories>
+
 	
+<distributionManagement>
+    <snapshotRepository>
+      <id>mavennew-snapshots</id>
+      <url>http://18.222.35.54:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
  
  
 </project>
