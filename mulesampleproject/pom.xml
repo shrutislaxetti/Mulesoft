@@ -95,9 +95,11 @@
 	<build>
 		<plugins>
 			<plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-deploy-plugin</artifactId>
-                           <configuration>
+                       <groupId>org.mule.tools.maven</groupId>
+			<artifactId>mule-maven-plugin</artifactId>
+                          <version>${mule.maven.plugin.version}</version>
+				<extensions>true</extensions>
+				<configuration>
 					<classifier>mule-application</classifier>
 					<cloudHubDeployment>
 						<region>eu-central-1</region>
@@ -110,16 +112,17 @@
 						<environment>SANDBOX</environment>
 					</cloudHubDeployment>
 				</configuration>
-          </plugin>
-			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
-				<extensions>true</extensions>
-				<configuration>
-					
-				</configuration>
-			</plugin>
+                   
+		<executions>
+                <execution>
+                 <id>deploy</id>
+                 <phase>deploy</phase>
+                 <goals>
+                     <goal>deploy</goal>
+                 </goals>
+             </execution>
+         </executions>
+		</plugin>
 		</plugins>
 	</build>
 
