@@ -94,10 +94,11 @@
  
 	<build>
 		<plugins>
+		
 			<plugin>
-                       <groupId>org.mule.tools.maven</groupId>
-			<artifactId>mule-maven-plugin</artifactId>
-                          <version>${mule.maven.plugin.version}</version>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
 					<classifier>mule-application</classifier>
@@ -112,20 +113,9 @@
 						<environment>SANDBOX</environment>
 					</cloudHubDeployment>
 				</configuration>
-                   
-		<executions>
-                <execution>
-                 <id>deploy</id>
-                 <phase>deploy</phase>
-                 <goals>
-                     <goal>deploy</goal>
-                 </goals>
-             </execution>
-         </executions>
-		</plugin>
+			</plugin>
 		</plugins>
 	</build>
-
 	
 
 	<repositories>
