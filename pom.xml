@@ -26,6 +26,17 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+				<classifier>mule-application</classifier>
+					 <cloudHubDeployment>
+						<region>eu-central-1</region>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>${app.runtime}</muleVersion>
+						<username>${username}</username>
+						<password>${password}</password>
+						<businessGroup>Abbott\ADC\ADC-NextGen-V3</businessGroup>
+						<applicationName>${project.artifactId}</applicationName>
+						<environment>Sandbox</environment>
+					</cloudHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
