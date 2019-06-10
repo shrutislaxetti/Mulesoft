@@ -5,5 +5,6 @@
 	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
 	<flow name="hello-worldFlow" doc:id="b20f3d49-ab73-4a27-84b4-be833edad2b2" >
 		<logger level="INFO" doc:name="Logger" doc:id="fcc34878-cf4d-40d5-aae4-9a7f1b0efa92" message="#[p('appliaction.name')]"/>
+	<logger message=“hello=${hello}” level=“INFO” doc:name=“logger”/>
 	</flow>
 </mule>
