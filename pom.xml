@@ -35,7 +35,7 @@
 						<password>${password}</password>
 						<businessGroup>Abbott\ADC\ADC-NextGen-V3</businessGroup>
 						<applicationName>demo-hello-world-application</applicationName>
-						<environment>Sandbox</environment>
+						<environment>${mule.environment}</environment>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
