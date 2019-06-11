@@ -14,7 +14,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
   </spring:beans>
     <flow name="helloworldFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/" doc:name="HTTP"/>
-        <set-payload value="${hello}  ${test}" doc:name="Set Payload"/>
+        <set-payload value="hii" doc:name="Set Payload"/>
     </flow>
 	
 </mule>
