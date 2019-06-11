@@ -55,7 +55,7 @@
 						<username>${username}</username>
 						<password>${password}</password>
 						<businessGroup>Abbott\ADC\ADC-NextGen-V3</businessGroup>
-						<applicationName>${project.artifactId}-cloudhub</applicationName>
+						<applicationName>${project.artifactId}-test</applicationName>
 						<environment>Sandbox</environment>
 					</cloudHubDeployment>
 				</configuration>
