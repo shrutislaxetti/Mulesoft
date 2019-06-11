@@ -49,7 +49,7 @@
 				     <configuration>
 					 <classifier>mule-application</classifier>
 					 <cloudHubDeployment>
-						<region>us-east-1</region>
+						<region>us-east-2</region>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>${app.runtime}</muleVersion>
 						<username>${username}</username>
