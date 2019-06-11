@@ -44,6 +44,7 @@
 						<password>${password}</password>
 						<applicationName>${project.artifactid}</applicationName>
 						<environment>${env}</environment>
+						<businessGroup>Abbott\ADC\ADC-NextGen-V3</businessGroup>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
