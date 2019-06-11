@@ -42,8 +42,8 @@
 						<muleVersion>${app.runtime}</muleVersion>
 						<username>${username}</username>
 						<password>${password}</password>
-						<applicationName>mulesampleproject-new</applicationName>
-						<environment>Sandbox</environment>
+						<applicationName>${project.artifactid}</applicationName>
+						<environment>${env}</environment>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
